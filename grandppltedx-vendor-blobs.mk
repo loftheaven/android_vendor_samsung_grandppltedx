@@ -11,3 +11,5 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/samsung/grandpplted
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/samsung/grandppltedx/proprietary/system/usr,system/usr)
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/samsung/grandppltedx/proprietary/system/vendor,system/vendor)
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/samsung/grandppltedx/proprietary/system/xbin,system/xbin)
