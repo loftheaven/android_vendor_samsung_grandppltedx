@@ -1,3 +1,4 @@
+
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/samsung/grandppltedx/proprietary/system/bin,system/bin)
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/samsung/grandppltedx/proprietary/system/cameradata,system/cameradata)

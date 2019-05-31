@@ -1,2 +1,2 @@
 # android_vendor_samsung_grandppltedx
-Samsung G532G Vendor folder for LineageOS 14.1
+Samsung G532 Vendor for LineageOS 14.1
