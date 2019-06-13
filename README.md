@@ -14,3 +14,12 @@ STUFFIES
 that are related to openSSL / needed by the 2 binaries
 
 > OPENSSL is deprecated as of Android 6 so good luck man..
+
+
+> -- (13 June +7)
+
+> (Even more stuffies) so i decided to do a quick search about openssl and that symbol altogether. The symbol is defined when OPENSSL_add_all_algorithms is loaded (this symbol is present on 2/4 libs above) with OPENSSL_LOAD_CONF undefined
+
+> link: (at libcrypto init) https://wiki.openssl.org/index.php/Library_Initialization
+
+> so im looking for a way to un-define openssl_load_conf somehow that doesnt break everything~
