@@ -15,11 +15,20 @@ that are related to openSSL / needed by the 2 binaries
 
 > OPENSSL is deprecated as of Android 6 so good luck man..
 
-
-> -- (13 June +7)
+-- (13 June +7)
 
 > (Even more stuffies) so i decided to do a quick search about openssl and that symbol altogether. The symbol is defined when OPENSSL_add_all_algorithms is loaded (this symbol is present on 2/4 libs above) with OPENSSL_LOAD_CONF undefined
 
 > link: (at libcrypto init) https://wiki.openssl.org/index.php/Library_Initialization
 
 > so im looking for a way to un-define openssl_load_conf somehow that doesnt break everything~
+
+-- (28 Jun +7)
+
+> So I decided that it is too hard (/impossible?) to implement tzdaemon | Samsung TEE
+
+> My workaround would be to either delete (gatekeeper|keystore).mt6737t.so or replace with ones from porridge (Wileyfox Spark/+) as its proven working by Melek
+
+-- update, same day
+
+> Apparently TEE is not the only problem. I removed it anyway and nothing wrong is up so I'll keep it that way.
