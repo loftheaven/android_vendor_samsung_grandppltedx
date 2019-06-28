@@ -28,7 +28,3 @@ that are related to openSSL / needed by the 2 binaries
 > So I decided that it is too hard (/impossible?) to implement tzdaemon | Samsung TEE
 
 > My workaround would be to either delete (gatekeeper|keystore).mt6737t.so or replace with ones from porridge (Wileyfox Spark/+) as its proven working by Melek
-
--- update, same day
-
-> Apparently TEE is not the only problem. I removed it anyway and nothing wrong is up so I'll keep it that way.
