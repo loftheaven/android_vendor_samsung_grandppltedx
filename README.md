@@ -1,34 +1,13 @@
 # android_vendor_samsung_grandppltedx
 Samsung G532 Vendor for LineageOS 14.1
 
-CURRENT BUG: TEE
+CURRENT BUG: EGL/OPENGL?
 
-> system/bin/taadaemon requires a symbol OPENSSL_add_all_algorithms_noconf
+07-03 03:55:48.359 847 847 D MALI : gles_state_set_error_internal:58: GLES error info:failed to allocate CPU memory
 
 
-STUFFIES
+this commit patches mtk_agpsd for icu56 compatibility (thanks TBM_13 for reference and Xen0n for the commands)
 
-> J7 Max has the same TEE implementation as this phone (Blowfish TEE, tzdaemon & taadaemon)
+Just gonna left the commit here:
 
-> there are alternative libs in system/lib (libsecopenssl_engine.so ; libopensslsmime.so ; libcrypto-rename.so ; libcurl2.so)
-that are related to openSSL / needed by the 2 binaries
-
-> OPENSSL is deprecated as of Android 6 so good luck man..
-
--- (13 June +7)
-
-> (Even more stuffies) so i decided to do a quick search about openssl and that symbol altogether. The symbol is defined when OPENSSL_add_all_algorithms is loaded (this symbol is present on 2/4 libs above) with OPENSSL_LOAD_CONF undefined
-
-> link: (at libcrypto init) https://wiki.openssl.org/index.php/Library_Initialization
-
-> so im looking for a way to un-define openssl_load_conf somehow that doesnt break everything~
-
--- (28 Jun +7)
-
-> So I decided that it is too hard (/impossible?) to implement tzdaemon | Samsung TEE
-
-> My workaround would be to either delete (gatekeeper|keystore).mt6737t.so or replace with ones from porridge (Wileyfox Spark/+) as its proven working by Melek
-
--- update, same day
-
-> Apparently TEE is not the only problem. I removed it anyway and nothing wrong is up so I'll keep it that way.
+https://github.com/xen0n/android_device_meizu_arale/commit/40c0561fdc07cf60222181b69cf3f3e82f1d7056
