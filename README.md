@@ -1,12 +1,6 @@
 # android_vendor_samsung_grandppltedx
 Samsung G532 Vendor for LineageOS 14.1
 
-CURRENT BUG: Stuck in boot animation (logs provided in device tree/issues)
-
-
-
-
-
 -----------------
 older commit patches mtk_agpsd for icu56 compatibility (thanks TBM_13 for reference and Xen0n for the commands). Just gonna left the commit here:
 
